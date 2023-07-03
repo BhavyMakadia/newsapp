@@ -10,12 +10,13 @@ export class NewsItem extends Component {
     // Render the NewsItem card
     return (
       <div>
-        <div className="card" style={{ width: "18rem" }}>
-          {/* Badge for indicating free content */}
-          <span class="position-absolute top-0 translate-middle badge rounded-pill bg-da+r" style={{ left: '90%', zIndex: 1 }}>
+        <div className="card">
+          <div style={{display:'flex',justifyContent:'flex-end',position:'absolute',right:'0'}}>          {/* Badge for indicating free content */}
+          <span class=" badge rounded-pill bg-danger"/* style={{ left: '90%', zIndex: 1 }}*/>
             Free
             <span class="visually-hidden">unread messages</span>
           </span>
+          </div>
 
           {/* Image */}
           <img src={imageurl} className="card-img-top" alt="..." />
