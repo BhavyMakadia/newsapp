@@ -43,7 +43,7 @@ export class News extends Component {
   async updateNews() {
     this.props.setProgress(10);
     console.log("cdm");
-
+//in apikey we add &apikey=${this.props.apikey}
     const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=3b160a1ed4ed48b7b987d8c5c559ed4e&page=${this.state.page}&pageSize=${this.props.pageSize}`;
 
     this.setState({ loading: true });
