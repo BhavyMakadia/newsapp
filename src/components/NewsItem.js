@@ -1,21 +1,21 @@
 // Import necessary modules
-import React, { Component } from 'react';
+import React from 'react';
 
 // Define the NewsItem component
-export class NewsItem extends Component {
-  render() {
+const NewsItem =(props)=> {
+  
     // Destructure the props for easier access
-    let { title, description, imageurl, newsUrl, author, date } = this.props;
+    let { title, description, imageurl, newsUrl, author, date, source  } = props;
     
     // Render the NewsItem card
     return (
       <div>
         <div className="card">
           <div style={{display:'flex',justifyContent:'flex-end',position:'absolute',right:'0'}}>          {/* Badge for indicating free content */}
-          <span class=" badge rounded-pill bg-danger"/* style={{ left: '90%', zIndex: 1 }}*/>
-            Free
-            <span class="visually-hidden">unread messages</span>
-          </span>
+          <span className=" badge rounded-pill bg-danger"/* style={{ left: '90%', zIndex: 1 }}*/>
+           { source}
+            
+</span>
           </div>
 
           {/* Image */}
@@ -40,8 +40,8 @@ export class NewsItem extends Component {
           </div>
         </div>
       </div>
-    );
-  }
+    )
+  
 }
 
 // Export the NewsItem component as default
