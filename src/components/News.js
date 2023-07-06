@@ -136,7 +136,7 @@ useEffect(() => {
 
     return (
       <div className='container my-3 ' >
-        <h1 className='text-center' style={{margin:'35px 0px', marginTop: '90px'}}>News Grow {capitalizeFirstLetter(props.category)}</h1>
+        <h1 className='text-center' style={{margin:'35px 0px', marginTop: '90px'}}>News Grow {capitalizeFirstLetter(props.category)}Headlines</h1>
 
         {/* Display a spinner while loading */}
         {/* {this.state.loading && <Spinner />} */}
@@ -163,7 +163,7 @@ useEffect(() => {
                       source={element.source.name}
                     />
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -177,7 +177,7 @@ useEffect(() => {
           </div>
         </div> */}
       </div>
-    );
+    )
   
 }
 // Default props for the component
